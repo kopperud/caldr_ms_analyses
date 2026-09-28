@@ -16,4 +16,4 @@ module load GCC/14.3.0
 module load R/4.5.2
 #module load Rust/1.91.1
 
-Rscript scripts/palms_hisse2_analysis.R
+Rscript scripts/analysis_hisse2.R
