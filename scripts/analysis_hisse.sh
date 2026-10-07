@@ -6,7 +6,6 @@
 #SBATCH --mem=4GB
 #SBATCH --output=logs/palms_hisse.log
 #SBATCH --error=logs/palms_hisse.err
-#SBATCH --qos=normal
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=12
