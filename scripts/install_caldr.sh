@@ -6,7 +6,6 @@
 #SBATCH --mem=16GB
 #SBATCH --output=logs/install_caldr.log
 #SBATCH --error=logs/install_caldr.err
-#SBATCH --qos=normal
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=6
