@@ -11,7 +11,6 @@ for i in {2..7}; do
 #SBATCH --mem=16GB
 #SBATCH --output=logs/${file_basename}.log
 #SBATCH --error=logs/${file_basename}.err
-#SBATCH --qos=normal
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=12
