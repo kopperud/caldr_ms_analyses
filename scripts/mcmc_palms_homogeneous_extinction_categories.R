@@ -21,7 +21,8 @@ lambda_large <- x2 + mu_large
 tau <- Uniform(0.0, 0.1)
 alpha <- Uniform(0.0, 0.1)
 beta <- Constant(0.0)
-standard_deviation <- Constant(0.587)
+#standard_deviation <- Constant(0.587)
+standard_deviation <- Uniform(0.0, 1.0)
 
 moves <- list(
   Scale(mu_small),
@@ -29,7 +30,8 @@ moves <- list(
   Scale(x1),
   Scale(x2),
   Scale(tau),
-  Scale(alpha)
+  Scale(alpha),
+  Scale(standard_deviation)
 )
 
 
@@ -48,6 +50,7 @@ model <- Model(
   lambda_large,
   tau,
   alpha,
+  standard_deviation,
   tr)
 
 monitors <- list(
@@ -65,7 +68,7 @@ df$lambda_large <- df$mu_large + df$x2
 out_name_table <- paste0("output/mcmc_palms_mu_1_lambda_", NUM_CLASSES, ".rda")
 save(df, file = out_name_table)
 
-mlp <- marginal_log_probability(model, moves, burnin = 1000, n_iter = 1000, thin = 10)
+mlp <- marginal_log_probability(model, moves, burnin = 1000, n_iter = 1000, thin = 10, tuning_interval = 100)
 
 out_name <- paste0("output/mcmc_palms_mu_1_lambda_", NUM_CLASSES, "_marginal_log_prob.rda")
 save(mlp, file = out_name)
