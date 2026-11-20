@@ -21,8 +21,7 @@ lambda_large <- x2 + mu_large
 tau <- Uniform(0.0, 0.1)
 alpha <- Uniform(0.0, 0.1)
 beta <- Constant(0.0)
-#standard_deviation <- Constant(0.587)
-standard_deviation <- Uniform(0.0, 1.0)
+standard_deviation <- Constant(0.587)
 
 moves <- list(
   Scale(mu_small),
@@ -30,8 +29,7 @@ moves <- list(
   Scale(x1),
   Scale(x2),
   Scale(tau),
-  Scale(alpha),
-  Scale(standard_deviation)
+  Scale(alpha)
 )
 
 
@@ -50,7 +48,6 @@ model <- Model(
   lambda_large,
   tau,
   alpha,
-  standard_deviation,
   tr)
 
 monitors <- list(
