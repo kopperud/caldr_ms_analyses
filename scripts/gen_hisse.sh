@@ -19,7 +19,7 @@ for i in {2..4}; do
 module load GCC/14.3.0
 module load R/4.5.2
 
-Rscript scripts/mcmc_palms_hisse.R ${i}
+Rscript scripts/mcmc_palms_hisse_${i}.R 
     "
 
     echo "$content" > "slurm_scripts/${file_basename}.sh"
