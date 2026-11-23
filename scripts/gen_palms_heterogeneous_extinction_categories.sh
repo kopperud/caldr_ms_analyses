@@ -5,7 +5,7 @@ for i in {2..7}; do
 
     content="#!/usr/bin/env sh
 #SBATCH --job-name=palms_heterogeneous_extinction_${i}
-#SBATCH --time=0-20:45:00
+#SBATCH --time=1-20:45:00
 #SBATCH --mail-type=END
 #SBATCH --mail-user=bjorn.kopperud@biol.lu.se
 #SBATCH --mem=16GB
