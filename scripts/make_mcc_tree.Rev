@@ -1,5 +1,3 @@
-#trees <- readTrees("data/Phylogeny_Con_Checklist.nex")
-trees <- readTreeTrace("data/Phylogeny_Con_Checklist.nex", burnin = 0.0)
-
-mcc_tree <- mccTree(trees, "data/palms_faurby_mcc.nex", positiveBranchLengths = TRUE)
-
+trees = readTrees("data/Phylogeny_Con_Checklist.nex")
+trace = treeTrace(trees, burnin = 0.0)
+mccTree(trace, "data/palms_faurby_mcc.nex", positiveBranchLengths = TRUE)
