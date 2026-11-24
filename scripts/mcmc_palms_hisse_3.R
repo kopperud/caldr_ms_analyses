@@ -79,7 +79,7 @@ model <- Model(
 # run the mcmc
 df <- caldr::mcmc(model, moves, burnin = 3000, n_iter = 10000, thin = 10)
 
-df$lambda_small_2 <- df$mu_small_2 + df$netdiv_small_2 + df$netdiv_small_1 + netdiv_small_0
+df$lambda_small_2 <- df$mu_small_2 + df$netdiv_small_2 + df$netdiv_small_1 + df$netdiv_small_0
 df$lambda_small_1 <- df$mu_small_1 + df$netdiv_small_1 + df$netdiv_small_0 
 df$lambda_small_0 <- df$mu_small_0 + df$netdiv_small_0 
 
